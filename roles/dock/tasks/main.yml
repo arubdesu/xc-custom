@@ -1,0 +1,19 @@
+---
+# manage dock
+
+- name: add apps
+  command: "{{ dockutil_exe }} --add {{ item }} --no-restart -v"
+  register: command_result
+  with_items: apps
+  changed_when: "'already exists' not in command_result"
+  notify: restart dock
+
+- name: add folders
+  command: "{{ dockutil_exe }} --add {{ item.path }} --view {{ item.view|default('automatic') }} --display {{ item.display|default('stack') }} --sort {{ item.sort|default('dateadded')}}  --no-restart -v"
+  register: command_result
+  with_items: folders
+  changed_when: "'already exists' not in command_result"
+  notify: restart dock
+
+- name: restart dock
+  command: killall Dock

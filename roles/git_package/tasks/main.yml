@@ -1,0 +1,6 @@
+---
+# installs a read-only git repo in the src_path location
+
+- name: clone {{ repo }}
+  git: repo=https://{{ repo }}.git dest={{ src_path }}/{{ repo }}
+

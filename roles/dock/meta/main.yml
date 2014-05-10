@@ -1,0 +1,6 @@
+---
+dependencies:
+  - role: git_package
+    when: "dockutil_exe != '/usr/local/bin/dockutil'"
+    repo: github.com/kcrawford/dockutil
+

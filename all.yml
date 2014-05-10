@@ -1,71 +1,33 @@
 ---
 - hosts: all
   roles:
-
-  # osx config
-  - role: dock
-    apps:
-    - /Applications/Firefox.app
-    - /Applications/Airmail.app
-    - /Applications/Dashlane.app
-    - /Applications/Spotify.app
-    - /Applications/Airmail.app
-    - "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app"
-    - "/Applications/Adobe Illustrator CC/Adobe Illustrator.app"
-    - /Applications/Atom.app
-    - /Applications/iTerm.app
-    - /Applications/Dash.app
-    folders:
-    - path: ~/
-    - path: ~/Documents
-    - path: ~/Downloads
-      sort: datemodified
-  - role: cask_package
-    package_name: asepsis
-  - role: dashboard
-    disabled: YES
-
-  # fonts
-  - role: cask_package
-    tap: caskroom/fonts
-    package_name: font-source-code-pro
-  - role: cask_package
-    tap: caskroom/fonts
-    package_name: font-sauce-code-powerline
-
   # cli
   # shell tooling
   - role: git
-    git_user_name: Bob Bob
-    git_user_email: bob.bob@example.com
-  - role: legit
-  - role: hub
-  - role: brew_package
-    package_name: vim
-  ## languages
-  - role: brew_package
-    package_name: node
-  - role: rbenv
-  - role: npm_package
-    package_name: grunt
-  - role: npm_package
-    package_name: bower
-  - role: cask_package
-    package_name: java
-  - role: brew_package
-    package_name: android-sdk
-  ## databases
-  - role: brew_package
-    package_name: postgres
-  - role: brew_package
-    package_name: mongodb
-  ## deployment
-  - role: brew_package
-    package_name: heroku-toolbelt
-  # - role: brew_package
-  #   package_name: ansible # Hey ! Already there !
+    git_user_name: Allister Banks
+    git_user_email: arubdesu@me.com
 
-  # gui
-  ## text editors
-  - role: cask_package
-    package_name: atom
+- hosts: Allister11
+  roles:
+  # GUI
+  # darn dock
+  - role: dock
+    dockutil_exe: /usr/local/bin/dockutil
+    src_path: ~/Documents/dev
+    apps:
+    - /Applications/Launchpad.app
+    - /Applications/3gChrome.app
+    - /Applications/Preview.app
+    - /Applications/CoRD.app
+    - /Applications/TeamViewer.app
+    - /Applications/Remote Desktop.app
+    - /Applications/Screen Sharing.app
+    - /Applications/Terminal.app
+    - /Applications/Activity Monitor.app
+    - /Applications/Safari.app
+    - /Applications/TextMate.app
+    - /Applications/TextExpander.app
+    - /Applications/System Preferences.app
+    folders:
+    - path: '~/Downloads'
+    - path: '~/Desktop'
