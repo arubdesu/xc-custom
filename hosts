@@ -1,2 +1,0 @@
-# hostname via ansible's setup module, confirmed match with scutil --get HostName
-Allister11  ansible_connection=local

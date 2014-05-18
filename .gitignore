@@ -1,2 +1,6 @@
 *.DS_Store*
 *.py[cod]
+ansible/*
+hosts
+time
+hosts
