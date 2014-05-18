@@ -3,15 +3,16 @@
   roles:
   # cli
   # shell tooling
-  - role: git
+  - role: arubdesu_git
     git_user_name: Allister Banks
     git_user_email: arubdesu@me.com
+  roles:
 
 - hosts: Allister11
   roles:
   # GUI
   # darn dock
-  - role: dock
+  - role: arubdesu_dock
     dockutil_exe: /usr/local/bin/dockutil
     src_path: ~/Documents/dev
     apps:
@@ -31,3 +32,12 @@
     folders:
     - path: '~/Downloads'
     - path: '~/Desktop'
+
+- hosts: other
+  roles:
+  # GUI
+  # bootstrappingApps
+  - role: arubdesu_cask_package
+    package_name: dropbox
+  - role: arubdesu_cask_package
+    package_name: onepassword
